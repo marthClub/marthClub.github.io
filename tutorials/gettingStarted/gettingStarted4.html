@@ -131,6 +131,391 @@
       <i>Tortoise:</i>
       It's been my pleasure. I look forward to seeing what you make! Now, here's that list.
     </p>
+    
+    
+    
+    <br>
+    <hr size="2" width="100%">
+    <br>
+    <b>COLOR</b><br>
+    Colors can be defined using the rgb format, which stands for red-green-blue. You can look up the rgb values using a <a href="http://www.w3schools.com/colors/colors_picker.asp">color picker</a>, or experiment yourself. Values range from 0 to 255.
+    
+    <ul>
+      <li>
+        <b>background( <i>r , g , b</i> );</b>
+      </li>
+      <ul>
+        <li>Sets the background color.</li>
+        <li><i>r, g,</i> and <i>b</i> can range from 0 to 255.</li>
+        <li>Example: <b>background( 255 , 0 , 0 );</b></li>
+        <ul>
+          <li>Sets the canvas background to red.</li>
+        </ul>
+        <li>Experiment with placing. Try placing the instruction:</li>
+        <ul>
+          <li>at the end of the <i>setup()</i> function.</li>
+          <li>at the beginning of the <i>draw()</i> function</li>
+          <li>At the end of the <i>draw()</i> function. Note: this will draw the background over any shapes you’ve drawn, so you won’t actually see anything, unless you have the alpha value set low (section on transparency).</li>
+        </ul>
+      </ul>
+      
+      <li>
+        <b>fill( <i>r , g , b</i> );</b>
+      </li>
+      <ul>
+        <li>Sets the fill color for any shapes drawn.</li>
+        <li><i>r, g,</i> and <i>b</i> can range from 0 to 255.</li>
+        <li>Example: <b>fill( 0 , 255 , 0 );</b></li>
+        <ul>
+          <li>Sets the fill color to green.</li>
+        </ul>
+        <li>Place in the <i>setup()</i> function or anywhere in the <i>draw()</i> function before the shape-drawing instruction.</li>
+      </ul>
+      
+      <li>
+        <b>noFill()</b>
+      </li>
+      <ul>
+        <li>Shapes drawn will not be filled.</li>
+        <li>No arguments.</li>
+        <li>Place in the <i>setup()</i> function or anywhere in the <i>draw()</i> function before the shape-drawing instruction.</li>
+      </ul>
+      
+      <li>
+        <b>stroke( <i>r , g , b</i> );</b>
+      </li>
+      <ul>
+        <li>Sets the stroke color for any shapes drawn. This lines and the borders of shapes.</li>
+        <li><i>r, g,</i> and <i>b</i> can range from 0 to 255.</li>
+        <li>Example: <b>stroke( 0 , 0 , 255 );</b></li>
+        <ul>
+          <li>Sets the fill color to blue.</li>
+        </ul>
+        <li>Place in the <i>setup()</i> function or anywhere in the <i>draw()</i> function before the shape-drawing instruction.</li>
+      </ul>
+      
+      <li>
+        <b>noStroke()</b>
+      </li>
+      <ul>
+        <li>Strokes will not be drawn. Lines are not drawn at all, and shapes have no borders.</li>
+        <li>No arguments.</li>
+        <li>Place in the <i>setup()</i> function or anywhere in the <i>draw()</i> function before the shape-drawing instruction.</li>
+        <li>Note that if <i>noStroke()</i> and <i>noFill()</i> are used together, no shapes or lines will be visible.</li>
+      </ul>
+      
+    </ul>
+    <b>TRANSPARENCY</b><br>
+    All instructions that take rgb arguments can take a fourth argument added, called <i>alpha</i>
+    <ul>
+      <li>Alpha defines how transparent something is.</li>
+      <li>Ranges from 0 to 255 just like the color values.</li>
+      <ul>
+        <li>0 = completely transparent.</li>
+        <li>255 = completely opaque.</li>
+        <li>values in between are partially transparent.</li>
+      </ul>
+      <li>Example: <b>fill( 0 , 0 , 0 , 50 );</b></li>
+      <ul>
+        <li>Sets the fill color to black with an alpha value of 50 (mostly transparent).</li>
+      </ul>
+      <li>Some things to try:</li>
+      <ul>
+        <li>Play with the alpha value on <i>fill()</i> and <i>stroke()</i> instructions.</li>
+        <li>Try using a small value (like 20) for the alpha in your <i>background()</i> instruction. Then move the instruction to the beginning of the <i>draw()</i> function. </li>
+      </ul>
+      
+    </ul>
+    
+    <b>SHAPES</b><br>
+    For a list of shape instructions, visit the <a href="https://p5js.org/reference/">p5.js reference page</a>, and look for a section called "2D Primitives". If you want to draw more complicated shapes, check out the instruction called <i>beginShape()</i>.<br>
+    <br>
+    <hr size="2" width="100%">
+    <br>
+    <br>
+    <br>
+    
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      Ms. Tortoise... I'm really sorry to wake you, but I've run into trouble.
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      Hm? Oh! Hello Achilles. Trouble? Yes, that's bound to happen. Let me guess: You changed something and now your program is back to doing nothing. Am I right?
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      Indeed you are. When I refreshed the webpage, it went back to a blank white page. Just like when we first started.
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      What's probably happened is that you've put something in your code that broke the rules of the programming language. In coding speak, we call that "bad syntax".
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      Bad syntax, eh? Well, how do I make my syntax good again?
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      Well, we're going to have to debug your program.
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      What the Hades does that mean? Debug?
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      It's a very old term, and its origin is pretty interesting. You should look it up sometime. But nowadays it refers to the process of dealing with issues in code.
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      Well, I thought for a minute I was good at this coding thing. But apparently I've already screwed something up and now I have to do some arcane ritual to fix it.
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      It's a simple process, really. You just have to find the issue and fix it.
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      Oh, that does sound simple. But how do I find the issue? I don't really even know what I'm doing just yet?
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      I'll show you a tool that you can use to help you find the issue. <b>Open up that tab that has your webpage in it.</b>
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      OK, I did. It is still blank.
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      OK. We're going to <b>open up your browser's console</b>.
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      What's the console?
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      It's a tool that all browsers come with that lets you look at a lot of technical stuff that webpages are doing.
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      How do I open it?
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      It depends on which browser you're using. Every one is a little different. I know that in Chrome, you can get there by pressing ctrl-shift-i. What browser are you using?
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      I use Xanthus.
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      Hmmm. Never heard of it. Try going into the menu and looking for something like "Developer Tools". Or you could do an internet search for "opening browser console on Xanthus".
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      OK. Give me a minute. I'll figure it out.
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      I'll be right here when you do!
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      OK. I think I found it. It opened a big, complicated window at the bottom of the screen.
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      Yes, that's it. On my browser, it opens on the right side. See? They're all a little different. Do you see a tabe that says "Console"? Or maybe "JavaScript"?
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      Yes.
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      Open that tab.
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      OK. I opened it. There's a bunch of red text.
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      Then you're in the right place. The stuff in red indicates problems with the code. It will usually list a number with each problem. Do you see anything like that?
+    </p>
+    
+    <!--- image --->
+    <img src="images/gettingStarted4-02.png" border="1"><br>
+    <br>
+    
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      Yes. I see two of them. One says "p5.min.js:4".
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      That means there's a potential problem in in the p5.min.js file at line 4.
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      But I haven't done anything to that file.
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      OK. Good. Then that's not the source of your issue. What's the other number you found?
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      There's a "sketch.js:8".
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      That's probably it. That means there's a potential problem in your sketch.js file at line 8. What does the error say?
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      It says "Uncaught SyntaxError: missing ) after argument list". What does that mean?
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      Honestly, I'm not exactly sure. But that "SyntaxError" probably means that you've broken a syntax rule somewhere on that line, or maybe the line before it or after it.
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      So what should I do?
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      Let's look at your code. The lines are numbered, so it will be easy to find line 8.
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      OK. I'm looking at line 8. Oh! I left out a comma between two of the arguments! Oops!
+    </p>
+    
+    <!--- image --->
+    <img src="images/gettingStarted4-03.png" border="1"><br>
+    <br>
+    
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      So you've done the first part of the debugging process. You found the issue. Now all you have to do is fix it.
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      That's easy. I'll just put that comma back in.
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      Great. Now commit and refresh to see if the issue is resolved.
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      I did, and the red text didn't change. I still have a blank page.
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      Remember that it may take a few seconds for your changes to take effect. Be patient, and keep refreshing.
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      Nope, still... Oh, there it goes. Yeah! The program is working again, and the red text went away. That console thing is still blocking half of the screen though.
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      You can go ahead and close it now. Just remember how to get back there, because this likely won't be the last time you have to debug.
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      So this is going to happen a lot?
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      It will, indeed. It's part of the process.
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      It doesn't seem like a very fun part.
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      Not usually. It can be very frustrating. Fortunately there is some skill involved.
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      How is that fortunate?
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      Well, it means you can get better at it. And you will get better at it. I try to remember that whenever I start getting frustrated because I'm having a hard time fixing a bug. Every time you do it you get better.
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      I would think that skilled programmers wouldn't make mistakes.
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      Not true. Everyone has to debug at some point. Skilled programmers do devlop some skills that make debugging less frequent and easier to deal with when it happens, though.
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      Yeah, I think I'll try and learn some of those things as soon as possible.
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      I can certainly teach you a few of them. For now, though, why don't you continue experimenting with your new creation. Remember that your webpage is available online for anyone to see. Send me a link to it later so I can check out what you've made.
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      I certainly will! Thank you, Ms. Tortoise! This has been a quite enjoyable experience. I'm excited to learn more. I'm already coming up with ideas for things I want to make.
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      I'm so glad that you enjoyed it. Let's get together again sometime, and I can show you a few more things.
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      I'd love to! In the meantime, what should I do if I want to learn more on my own?
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      There are a couple sites you should check out. The <a href="https://p5js.org/">p5.js website</a> is a great resource. Especially check out the <a href="https://p5js.org/tutorials/">tutorials</a> and <a href="https://p5js.org/reference/">reference</a> pages.
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      I'll bookmark it now.
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      Another great resource is <a href="https://www.khanacademy.org/computing/computer-programming/programming">Khan Academy's Intro to JS</a>. It's set up like an online class, and it will teach you some really important programming concepts. Some of the early sections will cover things you already know, but you can skip ahead if you want. It is really a wonderful resource. If you have the time and interest, I recommend it highly.
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      I'll check it out.
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      Excellent. Well, Achilles, this has been fun. But I had better start heading home. It's getting late.
+    </p>
+    <p style="color:#0019bc; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Achilles:</i>
+      OK. I'm going to keep working on this sketch. Thank you gain for taking the time to introduce me to coding!
+    </p>
+    <p style="color:#018c18; text-indent:-63px; margin-left:63px; margin-top:0; margin-bottom:0;">
+      <i>Tortoise:</i>
+      It was my pleasure. I look forward to seeing what you make! Happy coding!
+    </p>
+    
+    <br>
+    <br>
+    <a href="/">MARTH Club Home</a>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     
