@@ -167,7 +167,7 @@
         <li><i>r, g,</i> and <i>b</i> can range from 0 to 255.</li>
         <li>Example: <b>fill( 0 , 255 , 0 );</b></li>
         <ul>
-          <li>Sets the fill color to green.</li>
+          <li>Sets the fill color to green. All shapes will be filled with green.</li>
         </ul>
         <li>Place in the <i>setup()</i> function or anywhere in the <i>draw()</i> function before the shape-drawing instruction.</li>
       </ul>
@@ -189,7 +189,7 @@
         <li><i>r, g,</i> and <i>b</i> can range from 0 to 255.</li>
         <li>Example: <b>stroke( 0 , 0 , 255 );</b></li>
         <ul>
-          <li>Sets the fill color to blue.</li>
+          <li>Sets the stroke color to blue. All lines and shape outlines will draw in blue.</li>
         </ul>
         <li>Place in the <i>setup()</i> function or anywhere in the <i>draw()</i> function before the shape-drawing instruction.</li>
       </ul>
@@ -215,14 +215,14 @@
         <li>255 = completely opaque.</li>
         <li>values in between are partially transparent.</li>
       </ul>
-      <li>Example: <b>fill( 0 , 0 , 0 , 50 );</b></li>
+      <li>Example: <b>fill( 255 , 0 , 255 , 50 );</b></li>
       <ul>
-        <li>Sets the fill color to black with an alpha value of 50 (mostly transparent).</li>
+        <li>Sets the fill color to purple with an alpha value of 50 (mostly transparent).</li>
       </ul>
       <li>Some things to try:</li>
       <ul>
         <li>Play with the alpha value on <i>fill()</i> and <i>stroke()</i> instructions.</li>
-        <li>Try using a small value (like 20) for the alpha in your <i>background()</i> instruction. Then move the instruction to the beginning of the <i>draw()</i> function. </li>
+        <li>Try using a small value (like 20) for the alpha in your <i>background()</i> instruction. Then move the <i>background()</i> instruction to the beginning of the <i>draw()</i> function. </li>
       </ul>
       
     </ul>
